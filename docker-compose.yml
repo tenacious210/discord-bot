@@ -1,0 +1,9 @@
+services:
+  discord-bot:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: discord-bot
+    volumes:
+      - ./config:/discord-bot/config
+    restart: unless-stopped
